@@ -12,7 +12,7 @@ class Publisher(Node):
 
     def __init__(self):
         # the class constructor is called and gives name to the node
-        super().__init__('Coordinates_publisher')
+        super().__init__('Coordinates_publisher3')
         # the message to be sent is declared here
         self.publisher_ = self.create_publisher(Location, 'Arm_coord', 10) 
 
@@ -30,14 +30,14 @@ class Publisher(Node):
 def main(args=None):
     rclpy.init(args=args)
 
-    coordinates_publisher = Publisher()
+    coordinates_publisher3 = Publisher()
     
-    coordinates_publisher.send_message()
+    coordinates_publisher3.send_message()
 
     # Destroy the node explicitly
     # (optional - otherwise it will be done automatically
     # when the garbage collector destroys the node object)
-    coordinates_publisher.destroy_node()
+    coordinates_publisher3.destroy_node()
     rclpy.shutdown()
 
 

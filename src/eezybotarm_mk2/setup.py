@@ -22,6 +22,7 @@ setup(
     entry_points={
         'console_scripts': [
             'talker1 = eezybotarm_mk2.talker1:main',
+            'talker3 = eezybotarm_mk2.talker3:main',
             'listener1 = eezybotarm_mk2.listener1:main',
             'listener2 = eezybotarm_mk2.listener2:main',
             'client_move = eezybotarm_mk2.client1:main',
