@@ -21,12 +21,12 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'talker1 = eezybotarm_mk2.talker1:main',
-            'talker3 = eezybotarm_mk2.talker3:main',
-            'listener1 = eezybotarm_mk2.listener1:main',
-            'listener2 = eezybotarm_mk2.listener2:main',
-            'client_move = eezybotarm_mk2.client1:main',
-            'service_move = eezybotarm_mk2.service1:main',
+            'talk_coordinates = eezybotarm_mk2.talker1:main',
+            'listen_coordinates = eezybotarm_mk2.listener1:main',
+            'listen_coordinates_plot = eezybotarm_mk2.listener2:main',
+            'listener3 = eezybotarm_mk2.listener3:main',
+            'client_movement = eezybotarm_mk2.client1:main',
+            'server_movement = eezybotarm_mk2.service1:main',
         ],
     },
 )
