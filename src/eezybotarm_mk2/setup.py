@@ -27,6 +27,8 @@ setup(
             'listener3 = eezybotarm_mk2.listener3:main',
             'client_movement = eezybotarm_mk2.client1:main',
             'server_movement = eezybotarm_mk2.service1:main',
+            'pick = eezybotarm_mk2.servicePick:main',
+            'place = eezybotarm_mk2.servicePlace:main',
         ],
     },
 )
