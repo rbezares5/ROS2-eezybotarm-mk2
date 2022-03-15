@@ -5,6 +5,7 @@ from rclpy.node import Node
 
 from .lib.kinematic_model import EEZYbotARM_Mk2
 from .lib.serial_communication import arduinoController
+from .lib.params import servoAngle_EE_closed, servoAngle_EE_open
 
 class Service(Node):
 
@@ -26,8 +27,8 @@ class Service(Node):
         #myVirtualRobotArm.plot()
 
         # Define end effector open and closed angle
-        servoAngle_EE_closed = 10
-        servoAngle_EE_open = 90
+        #servoAngle_EE_closed = 80
+        #servoAngle_EE_open = 150
 
         # Calculate the current servo angles
         servoAngle_q1, servoAngle_q2, servoAngle_q3 = myVirtualRobotArm.map_kinematicsToServoAngles()
@@ -36,7 +37,7 @@ class Service(Node):
         myArduino.communicate(data=myArduino.composeMessage(servoAngle_q1=servoAngle_q1,
                                                             servoAngle_q2=servoAngle_q2,
                                                             servoAngle_q3=servoAngle_q3,
-                                                            servoAngle_EE=servoAngle_EE_open))
+                                                            servoAngle_EE=servoAngle_EE_closed))
 
 
         # Assign new cartesian position where we want the robot arm end effector to move to
@@ -62,7 +63,7 @@ class Service(Node):
         myArduino.communicate(data=myArduino.composeMessage(servoAngle_q1=servoAngle_q1,
                                                             servoAngle_q2=servoAngle_q2,
                                                             servoAngle_q3=servoAngle_q3,
-                                                            servoAngle_EE=servoAngle_EE_open))
+                                                            servoAngle_EE=servoAngle_EE_closed))
 
         # Close the serial port
         myArduino.closeSerialPort()
